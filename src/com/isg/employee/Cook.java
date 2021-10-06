@@ -34,4 +34,12 @@ public class Cook {
         System.out.println("Кухар " +this.name+ " -> Воду від постачальника отримано");
         isWaterEnough=true;
     }
+
+    public void ringer(){
+        try {
+            this.toCookADish();
+        }catch (CookBusyException e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
